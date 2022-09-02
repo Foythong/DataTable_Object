@@ -1,4 +1,4 @@
-// var prg = "php/formDatatable.php";
+var prg = "php/formDatatable.php";
 
 
 $(function(e){
