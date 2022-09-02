@@ -71,7 +71,7 @@ $(function(e){
         },success:function(data){   
             console.log(data); 
             row = JSON.parse(data);
-            console.log(row);
+//             console.log(row);
             if(row.status == 1){
               Swal.fire({
                 icon: 'success',
