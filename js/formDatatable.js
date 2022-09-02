@@ -1,5 +1,5 @@
 // var prg = "php/formDatatable.php";
-var members = [];
+
 
 $(function(e){
     $("#myTable").DataTable({
