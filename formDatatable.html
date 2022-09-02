@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+    <title>formDatatable</title>
+</head>
+<body>
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form_Modal" name="form_Modal" method="post">
+
+            <div class="mb-3">
+              <label for="Fname_modal">ชื่อ</label>
+              <input type="text" class="form-control" placeholder="ชื่อ" id="Fname_modal" name="Fname_modal">
+            </div>
+
+            <div class="mb-3">
+              <label for="Lname_modal">นามสกุล</label>
+              <input type="text" class="form-control" placeholder="นามสกุล" id="Lname_modal" name="Lname_modal">
+            </div>
+
+            <div class="mb-3">
+              <label for="memEmail_modal">อีเมล</label>
+              <input type="email" class="form-control" placeholder="อีเมล" id="memEmail_modal" name="memEmail_modal">
+            </div>
+
+            <div class="mb-3">
+              <label for="memJob_modal">ตำแหน่งงาน</label>
+              <input type="text" class="form-control" placeholder="ตำแหน่งงาน" id="memJob_modal" name="memJob_modal">
+            </div>
+
+            <input type="hidden" id="mem_id">
+            <div class="modal-footer">
+              <input type="submit" name="submit" class="btn btn-success" value="อัพเดทข้อมูล">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="mt-4 p-3 bg-primary text-white rounded">
+        <h6 class="">จัดการสมาชิก</h6>     
+      </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12 p-2">
+              <button onclick="addRow()" style="background:#3bbcf4;color:white;padding:10px 15px;border:none;border-radius: 10px;">Add</button>
+            </div>
+          </div>
+
+        <table id="myTable" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                  <th>id</th>
+                  <th>first name</th>
+                  <th>last name</th>
+                  <th>email address</th>
+                  <th>job title</th>
+                  <th> +- </th>
+                </tr>
+              </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <script src="js/formDatatable.js"></script>
+</body>
+</html>
